@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
     <title>Learning Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,30 +16,63 @@
                 extend: {
                     spacing: {
                         '13': '3.25rem'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter']
+                    },
+                    colors: {
+                        'oren': '#EC8021',
+                        'coffee': '#c0ffee'
                     }
                 }
             }
         }
     </script>
     <style type="text/tailwindcss">
-        * {
+        /* * {
             border: 1px solid red;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <h1>Lets Learn Tailwind CSS</h1>
+    <h1 class="text-6xl font-bold text-center my-8">Lets Learn <span
+            class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">Tailwind CSS</span></h1>
 
-    <section class="mb-10">
-        <h2>Spacing</h2>
+    <section class="mb-10 bg-gradient-to-tr from-indigo-200 via-red-400 to-yellow-300">
+        <h2 class="text-3xl text-center
+        ">Spacing</h2>
         <div class="m-13">Margin</div>
         <div class="p-4">Padding</div>
     </section>
 
-    <section class="mb-10">
-        <h2>Sizing</h2>
-        <div class="w-32">Kotak 1</div>
+    <section class="mb-10 bg-green-200">
+        <h2 class="text-3xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-oren">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Learning Typography Using Tailwind CSS</h2>
+        <div class="mb-4 text-gray-500">
+            By <a href="#" class="text-gray-700 font-semibold">Dame</a>, 14 May 2023
+        </div>
+        <p class="mb-4">Lorem ipsum, dolor sit amet <a href="#"
+                class="underline font-semibold text-blue-600">consectetur</a>
+            adipisicing elit. Eveniet amet, consectetur fugiat
+            provident optio
+            voluptate, suscipit dicta obcaecati debitis necessitatibus nostrum? Reiciendis doloribus animi blanditiis
+            nobis unde mollitia quod natus dicta voluptas quos! Maiores quod, blanditiis assumenda, officiis, doloremque
+            corporis sint enim porro illum natus facilis. Aperiam quia molestias excepturi.</p>
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit enim
+            doloribus
+            maiores
+            non assumenda
+            amet esse modi natus voluptatem eligendi!"</blockquote>
+        <p class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error possimus non eveniet laudantium
+            veritatis.
+            Obcaecati sed minima itaque praesentium voluptates eum placeat non eligendi. Cum nihil est porro quidem
+            minus.</p>
     </section>
 </body>
 
