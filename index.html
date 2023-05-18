@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,45 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
     <title>Learning Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    spacing: {
-                        '13': '3.25rem'
-                    },
-                    fontFamily: {
-                        'inter': ['Inter']
-                    },
-                    colors: {
-                        'oren': '#EC8021',
-                        'coffee': '#c0ffee'
-                    },
-                    animation: {
-                        'spin-slow': 'spin 3s linear infinite',
-                        'wiggle': 'wiggle 1s ease-in-out infinite'
-                    },
-                    keyframes: {
-                        wiggle: {
-                            '0%, 100%': { transform: 'rotate(-3deg)' },
-                            '50%': { transform: 'rotate(3deg)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        /* * {
-            border: 1px solid red;
-        } */
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
-        #toggle:checked ~ label div.toggle-circle-theme {
-            @apply translate-x-3
-        }
-    </style>
+    <script>
+        // tailwind.config = {
+            // darkMode: 'class',
+            // theme: {
+            //     extend: {
+            //         spacing: {
+            //             '13': '3.25rem'
+            //         },
+            //         fontFamily: {
+            //             'inter': ['Inter']
+            //         },
+            //         colors: {
+            //             'oren': '#EC8021',
+            //             'coffee': '#c0ffee'
+            //         },
+            //         animation: {
+            //             'spin-slow': 'spin 3s linear infinite',
+            //             'wiggle': 'wiggle 1s ease-in-out infinite'
+            //         },
+            //         keyframes: {
+            //             wiggle: {
+            //                 '0%, 100%': { transform: 'rotate(-3deg)' },
+            //                 '50%': { transform: 'rotate(3deg)' }
+            //             }
+            //         }
+            //     }
+            // }
+        // }
+    </script>
 </head>
 
 <body class="dark:bg-slate-800 dark:text-slate-100">
@@ -255,7 +248,7 @@
         </div>
 
         <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72 bg-white ">
-            <img src="assets/img/img-sunset.jfif" alt="sunset" class="w-full">
+            <img src="assets/img/img-sunset-1.jfif" alt="sunset" class="w-full">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2 text-slate-700 font-inter">Image Title</div>
                 <p class="text-sm text-slate-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
@@ -293,69 +286,51 @@
         <div class="h-15 text-lg font-bold text-slate-600 md:row-start-2 md:col-start-2 md:flex"><span
                 class="self-end">@loremipsum</span></div>
 
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunrise-2.jfif')] group-hover:rotate-12">
+        <div class="group aspect-[4/3]  md:aspect-[3/4] xl:aspect[4/3] grid-card">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunrise-2.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunrise-3.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3] md:col-start-3">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunrise-3.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunrise-4.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3]">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunrise-4.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-tech-1.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3]">
+            <div class="grid-card-img bg-[url('/assets/img/img-tech-1.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-tech-2.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3]">
+            <div class="grid-card-img bg-[url('/assets/img/img-tech-2.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] md:col-start-2 overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-tech-3.jfif')] group-hover:rotate-12">
+        <div class="group grid-card md:aspect-[3/4] xl:aspect[4/3] md:col-start-2">
+            <div class="grid-card-img bg-[url('/assets/img/img-tech-3.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] md:col-start-4 overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunset-1.jfif')] group-hover:rotate-12">
+        <div class="group grid-card md:aspect-[3/4] xl:aspect[4/3] md:col-start-4">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunset-1.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunset-2.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3]">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunset-2.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunset-3.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3] md:col-start-3 ">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunset-3.jfif')]">
             </div>
         </div>
-        <div
-            class="h-15 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect[4/3] md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500">
-            <div
-                class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-[url('/assets/img/img-sunset-4.jfif')] group-hover:rotate-12">
+        <div class="group grid-card aspect-[4/3] md:aspect-[3/4] xl:aspect[4/3] md:col-start-3 ">
+            <div class="grid-card-img bg-[url('/assets/img/img-sunset-4.jfif')]">
             </div>
         </div>
     </div>
 
     <div class="mb-96"></div>
+
+    <h1>Testing</h1>
 
     <script>
         const checkbox = document.querySelector('#toggle')
